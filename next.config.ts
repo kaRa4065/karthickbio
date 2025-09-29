@@ -1,7 +1,12 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+// next.config.js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export', // tells Next.js to generate static files
+  images: {
+    unoptimized: true, // required for GitHub Pages if using next/image
+  },
+  basePath: '/your-repo-name', // replace with your repo name
+  assetPrefix: '/your-repo-name/',
 };
 
-export default nextConfig;
+module.exports = nextConfig;

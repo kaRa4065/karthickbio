@@ -1,0 +1,78 @@
+[
+  {
+    "year": "Apr 2025 – Present",
+    "title": "Full Stack Developer | Freelancing",
+    "org": "Radiantze",
+    "roles": [
+      {
+        "id": 1,
+        "resp": "Developed AssetSync, a project for jewelry shops to manage jewels and loans, contributing to UI design, implementing filters, handling API integrations, and supporting minor backend tasks."
+      },
+      {
+        "id": 2,
+        "resp": "Built features for SeekersPlus & SeekersAI (Radiantze) platforms, including UI design, Google Authentication, protected routes, and API integrations using Next.js."
+      }
+    ],
+    "image": "/images/engineer.svg"
+  },
+  {
+    "year": "Jul 2022 - Dec 2022",
+    "title": "React JS Developer",
+    "org": "Quadkast Technologies, Chennai",
+    "roles": [
+      {
+        "id": 1,
+        "resp": "Developed and maintained responsive web applications using React, React Router, Next.js, and TypeScript."
+      },
+      {
+        "id": 2,
+        "resp": "Wrote modular and reusable React components."
+      },
+      {
+        "id": 3,
+        "resp": "Implemented new validation library in a project, learning and delivering within deadline."
+      },
+      {
+        "id": 4,
+        "resp": "Participated in code reviews to improve code quality and share best practices."
+      },
+      {
+        "id": 5,
+        "resp": "Demonstrated strong problem-solving skills in identifying and resolving issues in developing."
+      },
+      {
+        "id": 6,
+        "resp": "Worked closely with designers, product managers and back-end developers to ensure cohesive project delivery."
+      }
+    ],
+    "image": "/images/quadkast.png"
+  },
+  {
+    "year": "Jul 2022 - Dec 2022",
+    "title": "Lead Generation",
+    "org": "Eximio pvt ltd",
+    "roles": [
+      {
+        "id": 1,
+        "resp": "Utilized tools like Linkedin, Zoom info to track leads and ensure consistent follow-ups."
+      },
+      {
+        "id": 2,
+        "resp": "Researched and analyzed potential markets to build and maintain a database of qualified leads."
+      }
+    ],
+    "image": "/images/eximio.svg"
+  },
+  {
+    "year": "Dec 2019- Feb 2022",
+    "title": "Quality Engineer",
+    "org": "Will power Engineers pvt ltd, Chennai",
+    "roles": [
+      {
+        "id": 1,
+        "resp": "Responsibilities include developing quality control processes, conducting inspections, and testing partsto identify defects or nonconformities."
+      }
+    ],
+    "image": "/images/engineer.svg"
+  }
+]

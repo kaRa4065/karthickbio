@@ -1,0 +1,91 @@
+{
+  "images": [
+    {
+      "id": 1,
+      "img": [
+        {
+          "path": "/images/Logo/html.svg"
+        },
+        {
+          "path": "/images/Logo/css.svg"
+        },
+        {
+          "path": "/images/Logo/javascript.svg"
+        }
+      ],
+      "experience": "Skilled Frontend Developer with expertise in HTML, CSS, and JavaScript, building responsive, dynamic, and interactive web applications."
+    },
+    {
+      "id": 2,
+      "img": [
+        {
+          "path": "/images/Logo/react.svg"
+        },
+        {
+          "path": "/images/Logo/next-js.svg"
+        }
+      ],
+      "experience": "Skilled in building interactive and scalable UI components with React, and developing fast, server-rendered, and SEO-optimized web applications with Next.js."
+    },
+    {
+      "id": 3,
+      "img": [
+        {
+          "path": "/images/Logo/redux.svg"
+        }
+      ],
+      "experience": "Proficient in managing global state with Redux, leveraging its power to build scalable, predictable, and debuggable applications, seamlessly integrating with React and Next.js."
+    },
+    {
+      "id": 4,
+      "img": [
+        {
+          "path": "/images/Logo/typescript.svg"
+        }
+      ],
+      "experience": "Experienced in building scalable and maintainable applications with TypeScript, leveraging its static typing and interfaces to ensure robust, reliable, and efficient code, seamlessly integrating with React, Next.js, and Redux."
+    },
+    {
+      "id": 5,
+      "img": [
+        {
+          "path": "/images/Logo/git.svg"
+        }
+      ],
+      "experience": "I have expertise in Git version control, including branching strategies, merge conflicts."
+    },
+    {
+      "id": 6,
+      "img": [
+        {
+          "path": "/images/Logo/tailwind.svg"
+        },
+        {
+          "path": "/images/Logo/antd.svg"
+        }
+      ],
+      "experience": "Crafting responsive, customizable, and visually stunning UI components with Ant Design (antd) and Tailwind CSS, combining the strengths of both libraries to deliver efficient, scalable, and maintainable front-end solutions."
+    },
+    {
+      "id": 7,
+      "img": [
+        {
+          "path": "/images/Logo/node.svg"
+        },
+        {
+          "path": "/images/Logo/Express.svg"
+        }
+      ],
+      "experience": "Familiar with Node.js and Express.js from completing small tasks, such as setting up basic routes and handling requests. Eager to deepen knowledge by working on larger-scale backend projects.."
+    },
+    {
+      "id": 8,
+      "img": [
+        {
+          "path": "/images/Logo/mongo.svg"
+        }
+      ],
+      "experience": "Experience with MongoDB for handling data storage in small projects, including defining schemas, performing CRUD operations, and integrating with Node.js/Express.js applications. Open to growing skills with more complex database design and optimization."
+    }
+  ]
+}

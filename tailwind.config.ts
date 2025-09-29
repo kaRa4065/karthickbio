@@ -2,16 +2,22 @@ import type { Config } from "tailwindcss";
 
 export default {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{html,js,ts,jsx,tsx}", // Ensure your path is correct
   ],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: {
+          text_color: "#212121",
+          light: "#2F2941",
+          textcolor: "#010101",
+          bgbutton: "#1943F5",
+        },
       },
+      // screens: {
+      //   "970": "970px",
+      //   "700": "700px",
+      // },
     },
   },
   plugins: [],

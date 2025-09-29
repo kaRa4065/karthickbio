@@ -1,0 +1,23 @@
+[
+    {
+        "year": "2015-2019",
+        "education": "BE Mechanical Engineering",
+        "org": "Loyola Institute Of Technology, Chennai",
+        "percent": "6.5 CGPA",
+        "image": "/images/edu2.svg"
+    },
+    {
+        "year": "2014-2015",
+        "education": "HSC",
+        "org": "Chennai Higher Secondary School, Aminjikarai",
+        "percent": "74 %",
+        "image": "/images/edu1.svg"
+    },
+    {
+        "year": "2012-2013",
+        "education": "SSLC",
+        "org": "Chennai Higher Secondary School, Koyambedu",
+        "percent": "89.4 %",
+        "image": "/images/edu2.svg"
+    }
+]
