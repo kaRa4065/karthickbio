@@ -1,9 +1,10 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import Image from "next/image";
 
 export default function Carousel({ images }) {
   return (
@@ -24,7 +25,7 @@ export default function Carousel({ images }) {
             >
               <div className="flex">
                 {image.img.map((item, i) => (
-                  <img
+                  <Image
                     key={i}
                     src={item?.path}
                     alt={`Slide ${index + 1}`}
