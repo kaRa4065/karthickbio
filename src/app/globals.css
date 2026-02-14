@@ -2,6 +2,106 @@
 @tailwind components;
 @tailwind utilities;
 
-.shadow {
-  box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.09)
+:root {
+  --bg: #0a0a0a;
+  --surface: #171717;
+  --border: #262626;
+  --text: #fafafa;
+  --text-muted: #a3a3a3;
+  --accent: #22d3ee;
+  --accent-blue: #3b82f6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  background-image: url('/images/hero.svg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Scroll-triggered animation states */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-on-scroll-left {
+  opacity: 0;
+  transform: translateX(-24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-on-scroll-right {
+  opacity: 0;
+  transform: translateX(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Stagger children */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.stagger-children.is-visible > *:nth-child(1) { transition-delay: 0.1s; }
+.stagger-children.is-visible > *:nth-child(2) { transition-delay: 0.2s; }
+.stagger-children.is-visible > *:nth-child(3) { transition-delay: 0.3s; }
+.stagger-children.is-visible > *:nth-child(4) { transition-delay: 0.4s; }
+.stagger-children.is-visible > *:nth-child(5) { transition-delay: 0.5s; }
+.stagger-children.is-visible > *:nth-child(6) { transition-delay: 0.6s; }
+.stagger-children.is-visible > *:nth-child(7) { transition-delay: 0.7s; }
+.stagger-children.is-visible > *:nth-child(8) { transition-delay: 0.8s; }
+
+.stagger-children.is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Skills marquee - infinite scroll */
+@keyframes skillsMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.skills-marquee {
+  animation: skillsMarquee 35s linear infinite;
+}
+
+.skills-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Swiper dark theme */
+.skills-swiper .swiper-pagination-bullet {
+  background: var(--border);
+  opacity: 1;
+}
+.skills-swiper .swiper-pagination-bullet-active {
+  background: var(--accent);
+  width: 24px;
+  border-radius: 4px;
 }

@@ -1,47 +1,51 @@
+"use client";
+
 import items from "@/data/education/data.json";
-import Image from "next/image";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
+
 export default function Education() {
   return (
-    <section className="pb-10 flex flex-col justify-center ">
-      <h1 className="sm:text-[56px] text-[28px] font-bold sm:leading-[72px] leading-[36px] sm:text-center">
-        Highest Qualification
-      </h1>
-      <div className="lg:px-[100px] px-10 py-10 mt-5">
-        <div className="grid grid-cols-1 relative">
+    <section
+      id="education"
+      aria-labelledby="education-heading"
+      className="bg-[#0a0a0a] py-20 sm:py-28 px-4 sm:px-6 lg:px-8"
+    >
+      <div className="max-w-4xl mx-auto">
+        <AnimateOnScroll variant="up" className="mb-14">
+          <h2 id="education-heading" className="text-3xl sm:text-4xl font-bold text-white">
+            Education
+          </h2>
+          <p className="mt-2 text-primary-muted text-lg">Academic background</p>
+        </AnimateOnScroll>
+
+        <div className="grid gap-6 sm:gap-8">
           {items.map((item, index) => (
-            <div
-              key={index}
-              className={`md:flex items-center lg:gap-10 md:gap-10  ${
-                index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              }`}
-            >
-              <div className="flex md:w-1/2 w-full px-10 ">
-                <Image
-                  src={item.image}
-                  alt="edu"
-                  className="w-full rounded-lg  max-h-[300px]"
-                />
-              </div>
-              <div className="absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 w-[1px] bg-gray-200"></div>
-              <div
-                className={`md:w-1/2 w-full px-10 text-center md:mt-0 mt-10 relative ${
-                  index % 2 === 0 ? "md:text-left " : "md:text-right"
-                }`}
+            <AnimateOnScroll key={index} variant="up">
+              <article
+                className="rounded-2xl border border-primary-border bg-primary-surface p-6 sm:p-8 hover:border-primary-accent/40 transition-colors"
+                itemScope
+                itemType="https://schema.org/EducationalOccupationalCredential"
               >
-                <h2 className="text-sm font-normal text-[#646570]">
-                  {item.year}
-                </h2>
-                <p className="text-xl leading-[32px] font-bold text-[#8365A5] ">
-                  {item.education}
-                </p>
-                <p className="text-md leading-[32px] font-bold text-[#0D0D0D]">
-                  {item.org}
-                </p>
-                <p className="text-md  leading-[32px] font-bold text-[#0D0D0D]">
-                  {item.percent}
-                </p>
-              </div>
-            </div>
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                  <div>
+                    <h3 className="font-heading text-xl font-bold text-white" itemProp="name">
+                      {item.education}
+                    </h3>
+                    <p className="text-primary-accent font-medium mt-1" itemProp="credentialCategory">
+                      {item.org}
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-start sm:items-end gap-1 shrink-0">
+                    <time className="text-sm text-primary-muted" itemProp="dateCreated">
+                      {item.year}
+                    </time>
+                    <span className="text-sm font-semibold text-primary-accent">
+                      {item.percent}
+                    </span>
+                  </div>
+                </div>
+              </article>
+            </AnimateOnScroll>
           ))}
         </div>
       </div>

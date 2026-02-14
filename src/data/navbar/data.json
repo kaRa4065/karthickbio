@@ -1,41 +1,8 @@
 {
-    "navbar": [
-        {
-            "label": "Home",
-            "path": "#home",
-            "scrollToSection": true
-        },
-        {
-            "label": "Summary",
-            "path": "#summary",
-            "scrollToSection": true
-        },
-        {
-            "label": "Skills",
-            "path": "#skills",
-            "scrollToSection": true
-        },
-        {
-            "label": "Experience",
-            "path": "#experience",
-            "scrollToSection": true,
-            "subMenu": [
-                {
-                    "label": "Tech Journey",
-                    "path": "#tech-journey",
-                    "scrollToSection": true
-                },
-                {
-                    "label": "Beyond Code",
-                    "path": "#beyond-code",
-                    "scrollToSection": true
-                }
-            ]
-        },
-        {
-            "label": "Education",
-            "path": "#education",
-            "scrollToSection": true
-        }
-    ]
+  "navbar": [
+    { "label": "Summary", "path": "#summary", "scrollToSection": true },
+    { "label": "Experience", "path": "#experience", "scrollToSection": true },
+    { "label": "Skills", "path": "#skills", "scrollToSection": true },
+    { "label": "Education", "path": "#education", "scrollToSection": true }
+  ]
 }

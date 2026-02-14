@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <Layout>
       <Summary />
+      <Experience />
       <Skills />
       <Education />
-      <Experience/>
     </Layout>
   );
 }

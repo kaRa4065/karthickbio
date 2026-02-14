@@ -1,87 +1,68 @@
 "use client";
-import React, { useState } from "react";
+
 import experience from "@/data/experience/data.json";
-import Image from "next/image";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
-const Experience = () => {
-  const [toggleView, setToggleView] = useState(0);
-
-  const handleClick = (index) => {
-    if (index !== toggleView) {
-      setToggleView(index);
-    }
-  };
+export default function Experience() {
   return (
-    <div className="w-full bg-[#f7f7f7] pb-16 px-5 sm:px-20">
-      <div className=" md:mx-w-[1300px] mx-auto">
-        <div className="py-20" align="center">
-          <h3 className="text-[40px] text-[#020a19] text-center font-bold pb-5">
-            Technical Expertise
-          </h3>
-          <h5 className="hidden md:block text-[16px] md:text-[18px] leading-[28px] text-center font-regular text-[#333333]">
-            Where Passion Meets Expertise
-          </h5>
-        </div>
-        <div className="md:mx-w-[1300px] mx-auto ">
-          <div className="flex justify-center pt-5 lg:flex-row  flex-col  md:items-start items-center">
-            <div className="flex relative overflow-hidden max-w-[600px] max-h-[565px] hidden md:flex ">
-              <div
-                className="  flex-col transition-transform duration-500 md:flex hidden"
-                style={{
-                  transform: `translateY(-${toggleView * 100}%)`,
-                }}
+    <section
+      id="experience"
+      aria-labelledby="experience-heading"
+      className="bg-[#0a0a0a] py-20 sm:py-28 px-4 sm:px-6 lg:px-8"
+    >
+      <div className="max-w-3xl mx-auto">
+        <AnimateOnScroll variant="up" className="mb-14">
+          <h2 id="experience-heading" className="text-3xl sm:text-4xl font-bold text-white">
+            Experience
+          </h2>
+          <p className="mt-2 text-primary-muted text-lg">
+            Professional work history and key contributions
+          </p>
+        </AnimateOnScroll>
+
+        <div className="space-y-0">
+          {experience.map((job, index) => (
+            <AnimateOnScroll key={index} variant="up">
+              <article
+                className="py-8 border-b border-primary-border last:border-b-0 first:pt-0"
+                itemScope
+                itemType="https://schema.org/JobPosting"
               >
-                {experience?.map((item, index) => (
-                  <div
-                    key={index}
-                    className="   h-full  flex-shrink-0   flex-row  bg-[#f7f7f7] rounded-lg  md:h-[565px] md:flex hidden"
-                    style={{ width: "100%" }}
-                  >
-                    <Image
-                      src={item?.image}
-                      alt="platform"
-                      className="rounded-[18px] w-full h-full object-cover md:block hidden"
-                    />
+                <header className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                  <div>
+                    <h3 className="font-heading text-lg font-bold text-white" itemProp="title">
+                      {job.title}
+                    </h3>
+                    <p className="text-primary-accent font-medium mt-0.5" itemProp="hiringOrganization">
+                      {job.org}
+                    </p>
                   </div>
-                ))}
-              </div>
-            </div>
-            <div className="divide-y bg-[#F7F7F7] pl-8">
-              {experience.map((list, index) => (
-                <div
-                  key={index}
-                  className={`${
-                    toggleView === index
-                      ? "border border-[#D7D7D7] bg-[#ffffff]"
-                      : " bg-[#F7F7F7] "
-                  } flex flex-col items-start md:max-w-[700px] px-[30px] h-fit rounded-[15px] `}
-                >
-                  <h3
-                    className="text-[#050607] w-full cursor-pointer font-bold text-[24px] leading-[30px] hover:text-primary-bgbutton text-left transition-[padding] duration-300 ease-in-out py-[20px]"
-                    onClick={() => handleClick(index)}
+                  <time
+                    className="text-sm text-primary-muted shrink-0 mt-1 sm:mt-0"
+                    dateTime={job.year.replace(/\s*–\s*|\s*-\s*/g, "/")}
+                    itemProp="datePosted"
                   >
-                    {list?.title}
-                  </h3>
-                  {toggleView === index && (
-                    <>
-                      {list?.roles?.map((item) => (
-                        <p
-                          key={item?.id}
-                          className="text-[#333333] font-normal text-[18px] leading-[28px] py-5"
-                        >
-                          {item?.resp}
-                        </p>
-                      ))}
-                    </>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
+                    {job.year}
+                  </time>
+                </header>
+                <ul className="mt-4 space-y-2 list-none pl-0">
+                  {job.roles?.map((role) => (
+                    <li
+                      key={role.id}
+                      className="flex gap-2 text-primary-muted text-sm sm:text-base leading-relaxed"
+                    >
+                      <span className="text-primary-accent mt-1.5 shrink-0" aria-hidden>
+                        •
+                      </span>
+                      <span itemProp="description">{role.resp}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            </AnimateOnScroll>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default Experience;
+}
