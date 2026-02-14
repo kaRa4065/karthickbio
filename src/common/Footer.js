@@ -2,7 +2,10 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer id="footer" className="bg-primary-surface border-t border-primary-border">
+    <footer
+      id="footer"
+      className="bg-primary-surface border-t border-primary-border"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-12 flex flex-col sm:flex-row justify-between gap-8">
           <div className="max-w-md">
@@ -10,16 +13,19 @@ export default function Footer() {
               Karthick<span className="text-primary-accent">.</span>
             </h2>
             <p className="text-primary-muted text-sm leading-relaxed">
-              I have 2.5+ years of experience as a Frontend Developer, mainly working with React and Next.js. 
-              Eager to expand into backend development and build full-stack applications.
+              I have 2.5+ years of experience as a Frontend Developer, mainly
+              working with React and Next.js. Eager to expand into backend
+              development and build full-stack applications.
             </p>
           </div>
           <div>
-            <div className="text-sm font-semibold text-white mb-4">Social Links</div>
+            <div className="text-sm font-semibold text-white mb-4">
+              Social Links
+            </div>
             <div className="flex items-center gap-3">
               <Link
                 className="w-10 h-10 rounded-full border border-primary-border flex items-center justify-center text-primary-muted hover:text-primary-accent hover:border-primary-accent transition-colors"
-                href="http://www.facebook.com/quadkast"
+                href="https://www.instagram.com/00_karthiiieee_00/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -28,7 +34,7 @@ export default function Footer() {
               </Link>
               <Link
                 className="w-10 h-10 rounded-full border border-primary-border flex items-center justify-center text-primary-muted hover:text-primary-accent hover:border-primary-accent transition-colors"
-                href="http://www.linkedin.com/company/quadkast-technologies"
+                href="https://www.linkedin.com/in/karthick-ravi-81533b26b/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -37,7 +43,7 @@ export default function Footer() {
               </Link>
               <Link
                 className="w-10 h-10 rounded-full border border-primary-border flex items-center justify-center text-primary-muted hover:text-primary-accent hover:border-primary-accent transition-colors"
-                href="http://www.twitter.com/quadkast"
+                href="https://github.com/kaRa4065"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
