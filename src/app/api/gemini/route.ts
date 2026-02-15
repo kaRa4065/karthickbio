@@ -1,4 +1,6 @@
 export async function POST(req: Request) {
+  const origin = req.headers.get("origin") || "";
+
   const { prompt } = await req.json();
 
   const response = await fetch(
@@ -18,18 +20,20 @@ export async function POST(req: Request) {
     status: 200,
     headers: {
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "https://kara4065.github.io/",
+      "Access-Control-Allow-Origin": origin,
       "Access-Control-Allow-Methods": "POST, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type",
     },
   });
 }
 
-export async function OPTIONS() {
+export async function OPTIONS(req: Request) {
+  const origin = req.headers.get("origin") || "";
+
   return new Response(null, {
     status: 200,
     headers: {
-      "Access-Control-Allow-Origin": "https://kara4065.github.io/",
+      "Access-Control-Allow-Origin": origin,
       "Access-Control-Allow-Methods": "POST, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type",
     },
