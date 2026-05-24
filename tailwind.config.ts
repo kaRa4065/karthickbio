@@ -1,52 +1,40 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
   content: [
-    "./src/**/*.{html,js,ts,jsx,tsx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        heading: ["var(--font-jakarta)", "var(--font-inter)", "system-ui", "sans-serif"],
-      },
       colors: {
-        primary: {
-          text_color: "#e5e5e5",
-          muted: "#a3a3a3",
-          light: "#2F2941",
-          textcolor: "#0a0a0a",
-          bgbutton: "#3b82f6",
-          accent: "#22d3ee",
-          surface: "#171717",
-          border: "#262626",
+        terminal: {
+          bg: "#F8FAFC",
+          surface: "#FFFFFF",
+          card: "#F8FAFC",
+          elevated: "#E2E8F0",
+          border: "rgba(15,23,42,0.08)",
+          text: "#0F172A",
+          sub: "#475569",
+          muted: "#64748B",
+          accent: "#10B981",
+          accentDark: "#0F766E",
+          emerald: "#10B981",
+          green: "#166534",
+          amber: "#F59E0B",
         },
       },
-      animation: {
-        "fade-up": "fadeUp 0.7s ease-out forwards",
-        "fade-in": "fadeIn 0.6s ease-out forwards",
-        "slide-left": "slideLeft 0.6s ease-out forwards",
-        "slide-right": "slideRight 0.6s ease-out forwards",
+      fontFamily: {
+        mono: ["JetBrains Mono", "Space Mono", "monospace"],
+        sans: ["Outfit", "sans-serif"],
       },
-      keyframes: {
-        fadeUp: {
-          "0%": { opacity: "0", transform: "translateY(28px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-        fadeIn: {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
-        },
-        slideLeft: {
-          "0%": { opacity: "0", transform: "translateX(24px)" },
-          "100%": { opacity: "1", transform: "translateX(0)" },
-        },
-        slideRight: {
-          "0%": { opacity: "0", transform: "translateX(-24px)" },
-          "100%": { opacity: "1", transform: "translateX(0)" },
-        },
+      borderRadius: {
+        card: "10px",
       },
     },
   },
   plugins: [],
-} satisfies Config;
+};
+
+export default config;

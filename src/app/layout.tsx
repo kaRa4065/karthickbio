@@ -1,127 +1,126 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { siteConfig, siteUrl } from "@/config/site";
+import { LoadingScreen } from "@/components/LoadingScreen";
+import { AnimatedBackground } from "@/components/AnimatedBackground";
 
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-sans",
   display: "swap",
 });
 
-const jakarta = Plus_Jakarta_Sans({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-jakarta",
+  variable: "--font-mono",
   display: "swap",
 });
-
-const siteUrl = "https://kaRa4065.github.io/karthickbio";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Karthick Ravi | Full Stack Developer | React, Next.js, MERN",
-    template: "%s | Karthick Ravi",
+    default: `${siteConfig.name} | ${siteConfig.title} | Karthick | Karthi`,
+    template: `%s | ${siteConfig.name}`,
   },
-  description:
-    "Karthick Ravi is a Full Stack Developer based in Chennai, India. Experience with React, Next.js, TypeScript, Node.js, and MERN stack. Portfolio, work history, and education.",
+  description: `${siteConfig.name} (Karthick, Karthi) — ${siteConfig.title} in ${siteConfig.location}. React, Next.js, TypeScript, Node.js. Portfolio, experience, and contact.`,
   keywords: [
     "Karthick Ravi",
-    "Full Stack Developer",
+    "Karthick",
+    "Karthi",
+    "karthick developer",
+    "karthi developer",
+    "Full Stack Developer Chennai",
     "React developer",
-    "Next.js",
+    "Next.js developer",
     "MERN stack",
     "TypeScript",
-    "Chennai",
-    "frontend developer",
-    "web developer",
   ],
-  authors: [{ name: "Karthick Ravi" }],
-  creator: "Karthick Ravi",
-  icons: {
-    icon: [
-      {
-        url: "/favicon.ico",
-        sizes: "any",
-      },
-    ],
-    apple: "/apple-touch-icon.png",
-  },
+  authors: [{ name: siteConfig.name, url: siteUrl }],
+  creator: siteConfig.name,
+  alternates: { canonical: siteUrl },
   openGraph: {
     type: "website",
     url: siteUrl,
-    siteName: "Karthick Ravi - Full Stack Developer",
-    title: "Karthick Ravi | Full Stack Developer",
-    description:
-      "Full Stack Developer (MERN/Next.js). React, TypeScript, Node.js. Based in Chennai, India.",
+    siteName: `${siteConfig.name} — Portfolio`,
+    title: `${siteConfig.name} | ${siteConfig.title}`,
+    description: siteConfig.tagline,
+    images: [
+      {
+        url: `${siteUrl}/images/og.png`,
+        alt: `${siteConfig.name} — Portfolio`,
+      },
+    ],
     locale: "en_IN",
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Karthick Ravi | Full Stack Developer",
-    description: "Full Stack Developer. React, Next.js, TypeScript, MERN.",
+    card: "summary",
+    title: `${siteConfig.name} | ${siteConfig.title}`,
+    description: siteConfig.tagline,
+    images: [`${siteUrl}/images/og.png`],
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
 
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Karthick Ravi",
-  jobTitle: "Full Stack Developer",
-  description:
-    "Full Stack Developer with experience in MERN stack, React, Next.js, and TypeScript. Based in Chennai, India.",
+  name: siteConfig.name,
+  alternateName: siteConfig.aliases,
+  jobTitle: siteConfig.title,
+  description: siteConfig.tagline,
   url: siteUrl,
-  sameAs: [
-    "http://www.linkedin.com/company/quadkast-technologies",
-    "http://www.twitter.com/quadkast",
-  ],
+  email: siteConfig.email,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Chennai",
+    addressCountry: "IN",
+  },
+  worksFor: {
+    "@type": "Organization",
+    name: siteConfig.currentCompany.name,
+  },
   knowsAbout: [
     "React",
     "Next.js",
     "TypeScript",
     "Node.js",
     "MongoDB",
-    "Redux",
-    "Tailwind CSS",
+    "Web Development",
   ],
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Chennai",
-    addressCountry: "IN",
-  },
+  sameAs: [siteConfig.social.github, siteConfig.social.linkedin],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: `${siteConfig.name} Portfolio`,
+  url: siteUrl,
+  description: siteConfig.tagline,
+  author: { "@type": "Person", name: siteConfig.name },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${jakarta.variable}`}>
+    <html lang="en" className={jetbrainsMono.variable}>
       <head>
-        <link rel="icon" type="image/png" href="/images/karthick.png" />
-        <link rel="shortcut icon" href="/images/karthick.png" />
-        <link rel="apple-touch-icon" href="/images/karthick.png" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
       </head>
-      <body className="font-sans antialiased bg-[#0a0a0a] text-[#fafafa] relative">
-        <div className="fixed inset-0 bg-black/85 pointer-events-none z-0"></div>
-        <div className="relative z-10">
-          {children}
-        </div>
+      <body
+        className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased bg-slate-50 text-slate-950`}
+      >
+        <AnimatedBackground />
+        <LoadingScreen />
+        {children}
       </body>
     </html>
   );
