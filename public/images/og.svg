@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#F8FAFC"/>
+  <rect x="60" y="60" width="1080" height="510" rx="32" fill="#FFFFFF" stroke="#E6EEF7"/>
+  <text x="120" y="210" fill="#0F172A" font-family="Inter, Arial" font-size="54" font-weight="700">Karthick Ravi</text>
+  <text x="120" y="270" fill="#10B981" font-family="Inter, Arial" font-size="28" font-weight="600">Full Stack Developer</text>
+  <rect x="120" y="320" width="640" height="6" rx="3" fill="#10B981" opacity="0.4"/>
+  <text x="120" y="380" fill="#475569" font-family="Inter, Arial" font-size="20" width="640">Crafting high-performance web experiences, scalable systems, and elegant UI.</text>
+</svg>

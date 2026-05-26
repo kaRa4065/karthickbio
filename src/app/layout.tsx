@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     description: siteConfig.tagline,
     images: [
       {
-        url: `${siteUrl}/images/og.png`,
+        url: `${siteUrl}/images/og.svg`,
         alt: `${siteConfig.name} — Portfolio`,
       },
     ],
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: `${siteConfig.name} | ${siteConfig.title}`,
     description: siteConfig.tagline,
-    images: [`${siteUrl}/images/og.png`],
+    images: [`${siteUrl}/images/og.svg`],
   },
   robots: { index: true, follow: true },
 };

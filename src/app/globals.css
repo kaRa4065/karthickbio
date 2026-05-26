@@ -273,3 +273,203 @@ body::before {
   justify-content: center;
   overflow: hidden;
 }
+
+/* Ambient Background (from Figma design) */
+.ambient-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background-color: var(--bg);
+}
+.ambient-blob {
+  position: absolute;
+  filter: blur(140px);
+  opacity: 0.12;
+  border-radius: 100%;
+  pointer-events: none;
+  animation: pulse-slow 20s infinite alternate;
+}
+@keyframes pulse-slow {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.12;
+  }
+  50% {
+    transform: scale(1.1) translate(2%, 2%);
+    opacity: 0.15;
+  }
+  100% {
+    transform: scale(0.95) translate(-2%, -1%);
+    opacity: 0.1;
+  }
+}
+.blob-1 {
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, var(--emerald) 0%, transparent 70%);
+  top: -20%;
+  right: -10%;
+}
+.blob-2 {
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, #6366f1 0%, transparent 70%);
+  bottom: -10%;
+  left: -5%;
+  opacity: 0.08;
+}
+.blob-3 {
+  width: 40vw;
+  height: 40vw;
+  background: radial-gradient(circle, var(--emerald) 0%, transparent 70%);
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.05;
+}
+.blueprint-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.03;
+  background-image:
+    linear-gradient(rgba(0, 108, 73, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 108, 73, 0.3) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Terminal / window styling (Figma) */
+.terminal-window {
+  border: 1px solid rgba(0, 108, 73, 0.15);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s ease;
+}
+.terminal-window:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.12);
+}
+.terminal-header {
+  background: rgba(231, 232, 233, 0.4);
+  border-bottom: 1px solid rgba(0, 108, 73, 0.1);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+}
+.traffic-lights {
+  display: flex;
+  gap: 8px;
+}
+.light-red,
+.light-yellow,
+.light-green {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.light-red {
+  background: #ff5f56;
+}
+.light-yellow {
+  background: #ffbd2e;
+}
+.light-green {
+  background: #27c93f;
+}
+.terminal-content {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12px);
+}
+
+/* Scanline */
+.scanline-container {
+  position: relative;
+  overflow: hidden;
+}
+.scanline-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(16, 185, 129, 0.05) 50.5%,
+    transparent 51%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 2;
+}
+.scan-moving {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(16, 185, 129, 0.15),
+    transparent
+  );
+  animation: scan 4s linear infinite;
+  z-index: 3;
+  pointer-events: none;
+}
+@keyframes scan {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+/* Glass button effect */
+.glass-btn {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 108, 73, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+.glass-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.5s;
+}
+.glass-btn:hover::before {
+  left: 100%;
+}
