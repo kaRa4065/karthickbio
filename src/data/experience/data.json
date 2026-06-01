@@ -6,73 +6,77 @@
     "roles": [
       {
         "id": 1,
-        "resp": "Developed AssetSync, a project for jewelry shops to manage jewels and loans, contributing to UI design, implementing filters, handling API integrations, and supporting minor backend tasks."
+        "resp": "Developed AssetSync, a jewelry management platform for handling jewels, loans, inventory tracking, and customer records with advanced filters and API integrations."
       },
       {
         "id": 2,
-        "resp": "Built features for SeekersPlus & SeekersAI (Radiantze) platforms, including UI design, Google Authentication, protected routes, and API integrations using Next.js."
+        "resp": "Built and enhanced SeekersPlus & SeekersAI job platforms using Next.js, implementing Google Authentication, protected routes, reusable UI components, and scalable frontend architecture."
+      },
+      {
+        "id": 3,
+        "resp": "Worked on responsive dashboards, reusable component systems, performance optimization, and seamless backend integrations."
       }
     ],
     "image": "/images/engineer.svg"
   },
   {
-    "year": "Jul 2022 - Dec 2022",
-    "title": "React JS Developer",
-    "org": "Quadkast Technologies, Chennai",
+    "year": "2023 – 2024",
+    "title": "Frontend Developer",
+    "org": "Quadkast Technologies",
     "roles": [
       {
         "id": 1,
-        "resp": "Developed and maintained responsive web applications using React, React Router, Next.js, and TypeScript."
+        "resp": "Contributed to DMAN, an online food delivery platform, by building responsive interfaces, route management, reusable components, and API integrations."
       },
       {
         "id": 2,
-        "resp": "Wrote modular and reusable React components."
+        "resp": "Worked on QK-Connect, an HRM platform, implementing employee management features, authentication flows, dashboard UI, and optimized frontend functionality."
       },
       {
         "id": 3,
-        "resp": "Implemented new validation library in a project, learning and delivering within deadline."
+        "resp": "Developed scalable frontend applications using React.js, Next.js, TypeScript, Tailwind CSS, and modern UI libraries."
       },
       {
         "id": 4,
-        "resp": "Participated in code reviews to improve code quality and share best practices."
-      },
-      {
-        "id": 5,
-        "resp": "Demonstrated strong problem-solving skills in identifying and resolving issues in developing."
-      },
-      {
-        "id": 6,
-        "resp": "Worked closely with designers, product managers and back-end developers to ensure cohesive project delivery."
+        "resp": "Collaborated with designers and backend developers to deliver user-focused products with improved performance and accessibility."
       }
     ],
     "image": "/images/quadkast.png"
   },
   {
-    "year": "Jul 2022 - Dec 2022",
-    "title": "Lead Generation",
-    "org": "Eximio pvt ltd",
+    "year": "2024 – Present",
+    "title": "Personal Projects",
+    "org": "Independent",
     "roles": [
       {
         "id": 1,
-        "resp": "Utilized tools like Linkedin, Zoom info to track leads and ensure consistent follow-ups."
+        "resp": "Built ChatBotAI, an AI-powered assistant platform with conversational UI, real-time interactions, and modern responsive design."
       },
       {
         "id": 2,
-        "resp": "Researched and analyzed potential markets to build and maintain a database of qualified leads."
+        "resp": "Created a professional portfolio application using Next.js, Tailwind CSS, animations, reusable components, and accessibility best practices."
+      },
+      {
+        "id": 3,
+        "resp": "Designed multiple modern UI dashboards and frontend systems focused on performance, scalability, and user experience."
       }
     ],
-    "image": "/images/eximio.svg"
+    "image": "/images/project.svg"
   },
   {
-    "year": "Dec 2019- Feb 2022",
-    "title": "Quality Engineer",
-    "org": "Will power Engineers pvt ltd, Chennai",
+    "year": "Jul 2022 - Dec 2022",
+    "title": "Lead Generation Executive",
+    "org": "Eximio Pvt Ltd",
     "roles": [
       {
         "id": 1,
-        "resp": "Responsibilities include developing quality control processes, conducting inspections, and testing partsto identify defects or nonconformities."
+        "resp": "Utilized LinkedIn and ZoomInfo to research, track, and manage qualified business leads and follow-up workflows."
+      },
+      {
+        "id": 2,
+        "resp": "Analyzed market opportunities and maintained organized lead databases for business development initiatives."
       }
     ],
-    "image": "/images/engineer.svg"
+    "image": "/images/eximio.svg"
   }
 ]

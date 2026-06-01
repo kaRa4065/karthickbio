@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PageShell } from "@/components/layout/PageShell";
 import { siteConfig } from "@/config/site";
+import { link } from "fs";
 
 const featuredProjects = [
   {
@@ -10,6 +11,7 @@ const featuredProjects = [
     category: "AI · Search · Productivity",
     tags: ["React", "Python", "OpenAI"],
     image: "/images/smartseekers-ai.svg",
+    link: "https://www.smartseekers.ai/",
   },
   {
     title: "ParknStay",
@@ -18,28 +20,36 @@ const featuredProjects = [
     category: "Marketplace · Travel · Web3",
     tags: ["Next.js", "PostgreSQL", "Stripe"],
     image: "/images/parknstay.svg",
+    link: "https://www.parknstay.com/",
+  },
+  {
+    title: "PromptDesk AI",
+    subtitle:
+      "AI-powered conversational workspace with real-time responses  and intelligent interaction flows.",
+    category: "AI · Productivity · SaaS",
+    tags: ["React", "OpenAI", "Tailwind CSS"],
+    image: "/images/chatAI.png",
+    link: "https://kara4065.github.io/chatAI/",
   },
 ];
 
 const experienceItems = [
   {
     period: "2025 — Present",
-    role: "Full Stack Developer",
-    company: "Radiantze",
+    role: "React JS Developer",
+    company: "Radiantze INC",
     highlights: [
-      "Modernized a legacy monolith into modular SaaS services.",
-      "Built internal product workflows with Next.js and AWS.",
-      "Optimized API latency with Redis caching and scalable data design.",
+      "Developed the complete admin panel architecture and scalable frontend workflows for an AI-powered interview platform using Next.js and TypeScript",
+      "Implemented live interview monitoring features including camera pre-checks, face detection, malpractice handling flows,  AI-based interview character interactions and SEO optimization for improved search visibility",
     ],
   },
   {
-    period: "2018 — 2023",
-    role: "Full Stack Developer",
-    company: "Quadkast",
+    period: "2023 — 2025",
+    role: "Application Developer",
+    company: "Quadkast Technologies",
     highlights: [
-      "Delivered 15+ high-traffic commerce and SaaS landing pages.",
-      "Designed frontend systems with React, TypeScript, and Tailwind.",
-      "Improved performance and accessibility across product pages.",
+      "Developed scalable and reusable frontend modules using React.js and Ant Design for a production-level rental management platform.",
+      "Implemented complex business logic, API integrations, and dynamic data-driven workflows for admin and user management features",
     ],
   },
 ];
@@ -191,7 +201,7 @@ export default function HomePage() {
             </div>
           </section>
 
-          <section className="mt-32">
+          <section className="my-32">
             {/* heading */}
             <div className="mx-auto max-w-3xl text-center">
               <p className="text-xs uppercase tracking-[0.32em] text-emerald-600">
@@ -291,12 +301,12 @@ export default function HomePage() {
                           </p>
 
                           <p className="mt-2 text-sm font-semibold text-slate-900">
-                            Completed Investigation
+                            Live
                           </p>
                         </div>
 
                         <a
-                          href="#"
+                          href={project.link}
                           className="inline-flex items-center justify-center rounded-2xl bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-slate-800"
                         >
                           View Case ↗
@@ -308,97 +318,175 @@ export default function HomePage() {
               })}
             </div>
           </section>
+          <section className="my-64">
+            <div className="mx-auto max-w-6xl">
+              {/* DIFFERENT HEADER LAYOUT */}
+              <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+                {/* left side */}
+                <div>
+                  <div className="inline-flex items-center gap-3 rounded-full border border-emerald-200 bg-emerald-50 px-5 py-2">
+                    <span className="h-2 w-2 rounded-full bg-emerald-500" />
 
-          <section className="mt-28">
-            {/* heading */}
-            <div className="mx-auto max-w-3xl text-center">
-              <p className="text-xs uppercase tracking-[0.32em] text-emerald-600">
-                Professional Journey
-              </p>
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-emerald-700">
+                      Career Timeline
+                    </span>
+                  </div>
 
-              <h2 className="mt-5 text-4xl font-semibold tracking-tight text-slate-950">
-                Experience
-              </h2>
+                  <h2 className="mt-6 text-5xl font-semibold tracking-tight text-slate-950">
+                    Experience
+                  </h2>
+                </div>
 
-              <p className="mt-5 text-base leading-8 text-slate-600">
-                Building scalable products, polished interfaces, and modern
-                digital systems with startups and growing teams.
-              </p>
-            </div>
+                {/* right side */}
+                <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 p-6 sm:p-8 text-white shadow-[0_25px_80px_-35px_rgba(15,23,42,0.5)]">
+                  {/* glow */}
+                  <div className="absolute right-[-50px] top-[-50px] h-40 w-40 rounded-full bg-emerald-500/20 blur-3xl" />
 
-            {/* compact experience cards */}
-            <div className="mx-auto mt-14 grid max-w-5xl gap-6">
-              {experienceItems.map((item, index) => {
-                const shades = [
-                  "bg-[#f8fafc]",
-                  "bg-[#f0fdf4]",
-                  "bg-[#fefce8]",
-                  "bg-[#f5f3ff]",
-                ];
+                  <div className="relative flex flex-col gap-8 xl:flex-row xl:items-center xl:justify-between">
+                    {/* text */}
+                    <div className="max-w-2xl">
+                      <p className="text-sm uppercase tracking-[0.28em] text-emerald-300">
+                        Professional Journey
+                      </p>
 
-                return (
-                  <article
-                    key={item.role}
-                    className={`group relative overflow-hidden rounded-[2rem] border border-slate-200 ${shades[index % shades.length]} transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_-30px_rgba(15,23,42,0.18)]`}
-                  >
-                    {/* terminal top */}
-                    <div className="flex items-center justify-between border-b border-slate-200/70 bg-white/70 px-5 py-4 backdrop-blur">
-                      <div className="flex gap-2">
-                        <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
-                        <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
-                        <span className="h-3 w-3 rounded-full bg-[#28c840]" />
-                      </div>
-
-                      <p className="font-mono text-[11px] tracking-[0.2em] text-slate-400">
-                        experience_{String(index + 1).padStart(2, "0")}.log
+                      <p className="mt-4 max-w-xl text-sm leading-8 text-slate-300 sm:text-base">
+                        Building scalable products, polished interfaces, and
+                        high-performance digital systems with startups and
+                        growing SaaS teams.
                       </p>
                     </div>
 
-                    {/* content */}
-                    <div className="relative grid gap-8 p-6 lg:grid-cols-[220px_1fr] lg:items-start">
-                      {/* left info */}
-                      <div>
-                        <p className="text-xs uppercase tracking-[0.24em] text-emerald-700">
-                          {item.period}
+                    {/* stats */}
+                    <div className="grid w-full max-w-[320px] grid-cols-2 gap-4">
+                      <div className="rounded-2xl border border-white/10 bg-white/5 px-5 py-5 backdrop-blur">
+                        <p className="text-3xl font-semibold text-white">3+</p>
+
+                        <p className="mt-2 text-[11px] uppercase tracking-[0.22em] text-slate-400">
+                          Years Experience
                         </p>
-
-                        <h3 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950">
-                          {item.role}
-                        </h3>
-
-                        <div className="mt-4 inline-flex rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-xs font-medium uppercase tracking-[0.18em] text-slate-700 shadow-sm">
-                          {item.company}
-                        </div>
                       </div>
 
-                      {/* right highlights */}
-                      <div className="space-y-4">
-                        {item.highlights.map((highlight) => (
-                          <div
-                            key={highlight}
-                            className="flex gap-4 rounded-2xl border border-white/60 bg-white/70 px-5 py-4 shadow-sm backdrop-blur"
-                          >
-                            <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-emerald-500" />
+                      <div className="rounded-2xl border border-white/10 bg-white/5 px-5 py-5 backdrop-blur">
+                        <p className="text-3xl font-semibold text-white">7+</p>
 
-                            <p className="text-sm leading-7 text-slate-600">
-                              {highlight}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* faded bg text */}
-                      <div className="pointer-events-none absolute bottom-0 right-6 select-none font-mono text-7xl font-bold tracking-tight text-slate-200/40">
-                        0{index + 1}
+                        <p className="mt-2 text-[11px] uppercase tracking-[0.22em] text-slate-400">
+                          Projects Built
+                        </p>
                       </div>
                     </div>
-                  </article>
-                );
-              })}
+                  </div>
+                </div>
+              </div>
+
+              {/* EXPERIENCE CARDS */}
+              <div className="mt-14 flex flex-col gap-8">
+                {experienceItems.map((item, index) => {
+                  const themes = [
+                    {
+                      card: "bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white border-slate-800",
+                      accent: "bg-emerald-400",
+                      line: "bg-emerald-400/20",
+                      chip: "bg-white/10 border-white/10 text-white",
+                      text: "text-slate-300",
+                    },
+                    {
+                      card: "bg-gradient-to-br from-[#1e293b] via-[#0f172a] to-[#020617] text-white border-sky-900/40",
+                      accent: "bg-sky-400",
+                      line: "bg-sky-400/20",
+                      chip: "bg-sky-400/10 border-sky-400/20 text-sky-100",
+                      text: "text-slate-300",
+                    },
+                  ];
+
+                  const theme = themes[index % themes.length];
+
+                  return (
+                    <article
+                      key={item.role}
+                      className={`group relative overflow-hidden rounded-[2.5rem] border ${theme.card} shadow-[0_25px_80px_-35px_rgba(15,23,42,0.45)] transition-all duration-500 hover:-translate-y-1`}
+                    >
+                      {/* background glow */}
+                      <div
+                        className={`absolute -right-24 top-0 h-72 w-72 rounded-full blur-3xl opacity-20 ${theme.accent}`}
+                      />
+
+                      {/* terminal top */}
+                      <div className="relative flex items-center justify-between border-b border-white/10 px-6 py-5">
+                        <div className="flex items-center gap-2">
+                          <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
+                          <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
+                          <span className="h-3 w-3 rounded-full bg-[#28c840]" />
+                        </div>
+
+                        <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-slate-500">
+                          experience_{String(index + 1).padStart(2, "0")}.log
+                        </p>
+                      </div>
+
+                      {/* main */}
+                      <div className="relative grid gap-10 p-8 lg:grid-cols-[260px_1fr] lg:p-10">
+                        {/* left */}
+                        <div className="relative">
+                          <p className="text-xs uppercase tracking-[0.28em] text-emerald-300">
+                            {item.period}
+                          </p>
+
+                          <h3 className="mt-4 text-3xl font-semibold leading-tight tracking-tight">
+                            {item.role}
+                          </h3>
+
+                          <div
+                            className={`mt-6 inline-flex rounded-full border px-5 py-2 text-xs font-medium uppercase tracking-[0.18em] backdrop-blur ${theme.chip}`}
+                          >
+                            {item.company}
+                          </div>
+
+                          <div className="pointer-events-none absolute bottom-[-30px] left-0 select-none font-mono text-8xl font-bold text-white/5">
+                            0{index + 1}
+                          </div>
+                        </div>
+
+                        {/* right */}
+                        <div className="space-y-5">
+                          {item.highlights.map((highlight, i) => (
+                            <div
+                              key={highlight}
+                              className="relative flex gap-5"
+                            >
+                              {/* timeline */}
+                              <div className="relative flex flex-col items-center">
+                                <span
+                                  className={`relative z-10 mt-1 h-3 w-3 rounded-full ${theme.accent}`}
+                                />
+
+                                {i !== item.highlights.length - 1 && (
+                                  <span
+                                    className={`mt-2 h-full w-px ${theme.line}`}
+                                  />
+                                )}
+                              </div>
+
+                              {/* content */}
+                              <div className="flex-1 pb-6">
+                                <div className="rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 backdrop-blur-sm transition-all duration-300 hover:bg-white/[0.07]">
+                                  <p
+                                    className={`text-[15px] leading-8 ${theme.text}`}
+                                  >
+                                    {highlight}
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
             </div>
           </section>
-
-          <div className="mt-16 rounded-[2.5rem] border border-emerald-200 bg-white p-10 shadow-xl shadow-emerald-100">
+          <div className="mt-16 rounded-[2.5rem] border border-emerald-200 bg-white p-10 shadow-xl shadow-emerald-100 mt-64">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
               <div className="max-w-2xl">
                 <p className="text-sm uppercase tracking-[0.24em] text-emerald-700/75">

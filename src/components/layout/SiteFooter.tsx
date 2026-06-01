@@ -1,46 +1,54 @@
 import Link from "next/link";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { siteConfig } from "@/config/site";
+import { Mail } from "lucide-react";
 
 export function SiteFooter() {
-  const year = new Date().getFullYear();
-
   return (
-    <footer className="mt-auto border-t border-slate-200 bg-white px-4 py-10 sm:px-6 lg:px-8">
-      <div className="mx-auto flex max-w-6xl flex-col gap-6 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between">
-        <div className="space-y-2">
-          <p className="text-base font-semibold text-slate-950">
-            {siteConfig.name}
-          </p>
-          <p className="max-w-lg leading-7 text-slate-600">
-            Crafting clean SaaS experiences with strong engineering and subtle
-            terminal details.
+    <footer className="relative border-t border-slate-200/80 bg-white/70 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 px-6 py-5 sm:flex-row lg:px-8">
+        {/* left */}
+        <div className="flex items-center gap-3">
+          <span className="font-mono text-sm text-emerald-600">{"</>"}</span>
+
+          <p className="text-sm text-slate-500">
+            © {new Date().getFullYear()}{" "}
+            <span className="font-medium text-slate-800">Karthick Ravi</span>
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center gap-4 text-xs text-slate-600">
-          <span>© {year}</span>
-          <a
-            href={siteConfig.social.github}
+        {/* right socials */}
+        <div className="flex items-center gap-3">
+          <Link
+            href="https://github.com/kaRa4065"
             target="_blank"
-            rel="noreferrer"
-            className="transition hover:text-emerald-600"
+            className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-500 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:text-slate-950 hover:shadow-md"
           >
-            github
-          </a>
-          <a
-            href={siteConfig.social.linkedin}
+            <FiGithub className="h-4 w-4" />
+          </Link>
+
+          <Link
+            href="https://www.linkedin.com/in/karthick-ravi-81533b26b/"
             target="_blank"
-            rel="noreferrer"
-            className="transition hover:text-emerald-600"
+            className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-500 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:text-slate-950 hover:shadow-md"
           >
-            linkedin
-          </a>
-          <a
+            <FiLinkedin className="h-4 w-4" />
+          </Link>
+
+          {/* <Link
+            href="https://twitter.com/yourusername"
+            target="_blank"
+            className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-500 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:text-slate-950 hover:shadow-md"
+          >
+            <TwitterIcon className="h-4 w-4" />
+          </Link> */}
+
+          <Link
             href={`mailto:${siteConfig.email}`}
-            className="transition hover:text-emerald-600"
+            className="flex h-10 w-10 items-center justify-center rounded-xl border border-emerald-200 bg-emerald-50 text-emerald-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-100"
           >
-            email
-          </a>
+            <Mail className="h-4 w-4" />
+          </Link>
         </div>
       </div>
     </footer>

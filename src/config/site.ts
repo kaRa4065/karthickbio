@@ -4,7 +4,7 @@ export const siteConfig = {
   aliases: ["karthick", "karthi", "Karthick Ravi"],
   title: "Full Stack Developer",
   tagline: "Building web apps & backend systems from the terminal up.",
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "karthick.ravi@example.com",
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "karthickravi4065@gmail.com",
   location: "Chennai, India",
   timezone: "Asia/Kolkata",
   currentCompany: {
