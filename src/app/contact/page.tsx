@@ -15,14 +15,14 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <PageShell>
-      <div className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
+      <div className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+        <div className="mx-auto max-w-5xl">
           <SectionHeading
             title="Contact"
             subtitle="Send a message or reach out directly"
           />
 
-          <div className="grid lg:grid-cols-5 gap-8 mt-10">
+          <div className="mt-10 grid gap-8 lg:grid-cols-5">
             <div className="lg:col-span-3">
               <TerminalWindow title="Message">
                 <ContactForm />

@@ -63,6 +63,7 @@ export function SiteHeader() {
         {/* RIGHT */}
         <Link
           href={siteConfig.resumePath}
+          download="karthick_ravi_2026.pdf"
           className="group inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-950 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald-200 hover:bg-emerald-50 hover:text-emerald-700 hover:shadow-md"
         >
           Resume

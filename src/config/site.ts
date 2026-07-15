@@ -12,7 +12,7 @@ export const siteConfig = {
     role: "Full Stack Developer",
     period: "Apr 2025 – Present",
   },
-  resumePath: "/resume.pdf",
+  resumePath: "/resume/karthick_ravi_2026.pdf",
   social: {
     linkedin: "https://www.linkedin.com/in/karthick-ravi",
     github: "https://github.com/kaRa4065",

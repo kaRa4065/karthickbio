@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { siteConfig } from "@/config/site";
 import type { ContactFormData } from "@/types";
 import { TerminalButton } from "@/components/ui/TerminalButton";
 
@@ -13,17 +12,45 @@ const initialState: ContactFormData = {
 
 export function ContactForm() {
   const [form, setForm] = useState<ContactFormData>(initialState);
-  const [status, setStatus] = useState<"idle" | "sent">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "sent" | "error">(
+    "idle",
+  );
+  const [responseMessage, setResponseMessage] = useState("");
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Portfolio contact from ${form.name}`);
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
-    );
-    window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
-    setStatus("sent");
-    setForm(initialState);
+
+    setStatus("loading");
+    setResponseMessage("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.message || "Failed to send message.");
+      }
+
+      setStatus("sent");
+      setResponseMessage(
+        data.message || "I got your message. I’ll contact you soon.",
+      );
+      setForm(initialState);
+    } catch (error) {
+      setStatus("error");
+      setResponseMessage(
+        error instanceof Error
+          ? error.message
+          : "Something went wrong. Please try again.",
+      );
+    }
   };
 
   const inputClass =
@@ -32,7 +59,10 @@ export function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
-        <label htmlFor="name" className="block font-mono text-xs text-terminal-muted mb-1">
+        <label
+          htmlFor="name"
+          className="block font-mono text-xs text-terminal-muted mb-1"
+        >
           name
         </label>
         <input
@@ -45,10 +75,15 @@ export function ContactForm() {
           onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
           className={inputClass}
           placeholder="Your name"
+          disabled={status === "loading"}
         />
       </div>
+
       <div>
-        <label htmlFor="email" className="block font-mono text-xs text-terminal-muted mb-1">
+        <label
+          htmlFor="email"
+          className="block font-mono text-xs text-terminal-muted mb-1"
+        >
           email
         </label>
         <input
@@ -61,10 +96,15 @@ export function ContactForm() {
           onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
           className={inputClass}
           placeholder="you@example.com"
+          disabled={status === "loading"}
         />
       </div>
+
       <div>
-        <label htmlFor="message" className="block font-mono text-xs text-terminal-muted mb-1">
+        <label
+          htmlFor="message"
+          className="block font-mono text-xs text-terminal-muted mb-1"
+        >
           message
         </label>
         <textarea
@@ -76,14 +116,28 @@ export function ContactForm() {
           onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
           className={`${inputClass} resize-y min-h-[120px]`}
           placeholder="Tell me about your project..."
+          disabled={status === "loading"}
         />
       </div>
-      <TerminalButton type="submit" variant="primary" className="w-full sm:w-auto">
-        $ send_message
+
+      <TerminalButton
+        type="submit"
+        variant="primary"
+        className="w-full sm:w-auto"
+        disabled={status === "loading"}
+      >
+        {status === "loading" ? "$ sending..." : "$ send_message"}
       </TerminalButton>
+
       {status === "sent" && (
         <p className="font-mono text-xs text-terminal-green" role="status">
-          Opening your mail client…
+          {responseMessage}
+        </p>
+      )}
+
+      {status === "error" && (
+        <p className="font-mono text-xs text-red-400" role="status">
+          {responseMessage}
         </p>
       )}
     </form>
