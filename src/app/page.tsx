@@ -150,7 +150,7 @@ export default function HomePage() {
                     </p>
 
                     <p className="mt-3 text-lg font-semibold text-slate-900">
-                      Node.js APIs
+                      Python, FastAPIs
                     </p>
                   </div>
 
