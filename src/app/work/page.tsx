@@ -14,25 +14,25 @@ const projects = [
       "AI-powered semantic search platform that surfaces documentation with contextual understanding and smart retrieval.",
     category: "Fullstack",
     tags: ["Next.js", "Python", "OpenAI"],
-    url: "#",
+    url: "https://www.smartseekers.ai/",
     gradient: "from-slate-800 to-slate-700",
   },
-  {
-    title: "SeekersPlus",
-    description:
-      "Modern SaaS platform focused on scalable dashboards, user workflows, analytics, and operational efficiency.",
-    category: "Fullstack",
-    tags: ["React", "Node.js", "MongoDB"],
-    url: "#",
-    gradient: "from-neutral-800 to-neutral-700",
-  },
+  // {
+  //   title: "SeekersPlus",
+  //   description:
+  //     "Modern SaaS platform focused on scalable dashboards, user workflows, analytics, and operational efficiency.",
+  //   category: "Fullstack",
+  //   tags: ["React", "Node.js", "MongoDB"],
+  //   url: "#",
+  //   gradient: "from-neutral-800 to-neutral-700",
+  // },
   {
     title: "ParknStay",
     description:
       "EV parking and booking platform with responsive dashboards, payment integration, and seamless booking experiences.",
     category: "Frontend",
     tags: ["React", "Next.js", "Stripe"],
-    url: "#",
+    url: "https://www.parknstays.com/",
     gradient: "from-zinc-800 to-zinc-700",
   },
   {
@@ -41,16 +41,16 @@ const projects = [
       "Food delivery platform with optimized ordering flows, restaurant listings, and responsive frontend modules.",
     category: "Frontend",
     tags: ["React.js", "Tailwind CSS", "REST APIs"],
-    url: "#",
+    url: "https://dman.in/#/home",
     gradient: "from-stone-800 to-stone-700",
   },
   {
-    title: "QK-Connect",
+    title: "Trivana",
     description:
       "HRM application focused on employee management, attendance tracking, dashboards, and workflow systems.",
     category: "Frontend",
     tags: ["TypeScript", "React", "CoreUI"],
-    url: "#",
+    url: "https://www.quadkast.com/products/trivana",
     gradient: "from-slate-700 to-slate-600",
   },
   {
@@ -68,16 +68,25 @@ const projects = [
       "Personal AI chatbot project with conversational UI, smart interactions, and clean real-time messaging.",
     category: "Personal",
     tags: ["Next.js", "AI", "Tailwind CSS"],
-    url: "#",
+    url: "https://kara4065.github.io/chatAI/",
     gradient: "from-zinc-700 to-zinc-600",
   },
   {
     title: "Birthday Celebration Website",
     description:
       "Interactive birthday website with animations, music integration, and engaging personalized experiences.",
-    category: "Personal",
+    category: "Fullstack",
     tags: ["HTML", "CSS", "JavaScript"],
-    url: "#",
+    url: "https://iniyal-birthday.vercel.app/",
+    gradient: "from-stone-700 to-stone-600",
+  },
+  {
+    title: "Creative Culture Photography",
+    description:
+      "Portfolio and booking website for a photography business with a Web3Forms-powered contact form via a Next.js API route.",
+    category: "C",
+    tags: ["Next.js", "Tailwind CSS", "Web3Forms"],
+    url: "https://creativeculturephotography.com/",
     gradient: "from-stone-700 to-stone-600",
   },
 ];

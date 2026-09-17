@@ -3,21 +3,21 @@
     "id": "web-apps",
     "title": "Web Applications",
     "command": "npm run build:web",
-    "description": "Responsive, performant frontends with React and Next.js — from dashboards and SaaS UIs to marketing sites with SEO and accessibility baked in.",
-    "stack": ["React", "Next.js", "TypeScript", "Tailwind CSS"]
+    "description": "Responsive, performant frontends with React and Next.js — from dashboards and SaaS UIs to marketing sites with SEO, role-based access control, and accessibility baked in.",
+    "stack": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Ant Design", "Shadcn/UI"]
   },
   {
     "id": "backend",
-    "title": "Backend Systems",
+    "title": "Backend & APIs",
     "command": "npm run start:api",
-    "description": "REST APIs, authentication flows, and data layers with Node.js and Express — integrated with MongoDB and ready to scale with your product.",
-    "stack": ["Node.js", "Express", "MongoDB", "REST APIs"]
+    "description": "Production-grade REST APIs, authentication flows, and data layers with Node.js and Express — integrated with MongoDB and wired for real-time features via WebSockets.",
+    "stack": ["Node.js", "Express.js", "MongoDB", "REST APIs", "WebRTC"]
   },
   {
-    "id": "mobile-apps",
-    "title": "Mobile Apps",
-    "command": "npm run build:mobile",
-    "description": "Creating cross-platform mobile experiences with React Native and Flutter that feel native and performant.",
-    "stack": ["React Native", "Flutter", "TypeScript", "Expo"]
+    "id": "realtime",
+    "title": "Real-Time & Voice AI",
+    "command": "npm run start:realtime",
+    "description": "Live audio/video experiences powered by WebRTC, with AI-driven speech using Deepgram for speech-to-text and Amazon Polly for text-to-speech — built for interview and communication platforms.",
+    "stack": ["WebRTC", "Deepgram", "Amazon Polly", "STT", "TTS"]
   }
 ]

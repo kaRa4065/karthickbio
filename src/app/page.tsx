@@ -7,59 +7,60 @@ const featuredProjects = [
   {
     title: "SmartSeekers AI",
     subtitle:
-      "Enterprise search intelligence built with LLMs for faster internal documentation discovery.",
-    category: "AI · Search · Productivity",
-    tags: ["React", "Python", "OpenAI"],
+      "AI-powered interview platform with live monitoring, face detection, WebRTC audio/video interviews, and speech AI integrations.",
+    category: "AI · Voice · SaaS",
+    tags: ["Next.js", "TypeScript", "WebRTC", "Deepgram"],
     image: "/images/smartseekers-ai.svg",
     link: "https://www.smartseekers.ai/",
   },
   {
     title: "ParknStay",
     subtitle:
-      "A modern marketplace for EV parking, private land stays, and secure bookings across North America.",
-    category: "Marketplace · Travel · Web3",
-    tags: ["Next.js", "PostgreSQL", "Stripe"],
+      "Scalable rental management platform with reusable React modules, REST API integrations, and complex business logic built on the MERN stack.",
+    category: "Marketplace · MERN · SaaS",
+    tags: ["React.js", "Node.js", "MongoDB", "Ant Design"],
     image: "/images/parknstay.svg",
-    link: "https://www.parknstay.com/",
+    link: "https://www.parknstays.com/",
   },
   {
-    title: "PromptDesk AI",
+    title: "Creative Culture Photography",
     subtitle:
-      "AI-powered conversational workspace with real-time responses  and intelligent interaction flows.",
-    category: "AI · Productivity · SaaS",
-    tags: ["React", "OpenAI", "Tailwind CSS"],
-    image: "/images/chatAI.png",
-    link: "https://kara4065.github.io/chatAI/",
+      "Portfolio and booking website for a photography business with a Web3Forms-powered contact form via a Next.js API route.",
+    category: "Web · Next.js · Business",
+    tags: ["Next.js", "Tailwind CSS", "Web3Forms"],
+    image: "/images/creativeculture.png",
+    link: "https://creativeculturephotography.com/",
   },
 ];
 
 const experienceItems = [
   {
-    period: "2025 — Present",
-    role: "React JS Developer",
-    company: "Radiantze INC",
+    period: "Apr 2025 — Present",
+    role: "Application Developer",
+    company: "Radiantze",
     highlights: [
-      "Developed the complete admin panel architecture and scalable frontend workflows for an AI-powered interview platform using Next.js and TypeScript",
-      "Implemented live interview monitoring features including camera pre-checks, face detection, malpractice handling flows,  AI-based interview character interactions and SEO optimization for improved search visibility",
+      "Architected the admin panel and frontend workflows for an AI-powered interview platform using Next.js and TypeScript, with live monitoring — camera pre-checks, face detection, and malpractice handling.",
+      "Built real-time voice interview capabilities using WebRTC for live audio/video streaming, integrated with Deepgram for speech-to-text and Amazon Polly for text-to-speech, plus AI-driven interview character interactions.",
+      "Led and mentored a team of 4 developers, overseeing code quality, task delegation, and delivery timelines for key product features.",
     ],
   },
   {
-    period: "2023 — 2025",
+    period: "Mar 2023 — Feb 2025",
     role: "Application Developer",
     company: "Quadkast Technologies",
     highlights: [
-      "Developed scalable and reusable frontend modules using React.js and Ant Design for a production-level rental management platform.",
-      "Implemented complex business logic, API integrations, and dynamic data-driven workflows for admin and user management features",
+      "Built reusable UI components with React.js and integrated Google Authentication (OAuth) and the Stripe payment gateway for secure user onboarding and subscription workflows.",
+      "Collaborated with backend and product teams to deliver end-to-end, responsive features within agile development cycles — from requirements through deployment.",
     ],
   },
 ];
 
 const skillTags = [
-  "React",
-  "TypeScript",
+  "React.js",
   "Next.js",
+  "TypeScript",
   "Node.js",
-  "PostgreSQL",
+  "MongoDB",
   "Tailwind CSS",
 ];
 
@@ -87,7 +88,7 @@ export default function HomePage() {
                   </span>
 
                   <span className="rounded-full border border-slate-200 bg-white px-5 py-2 text-xs font-medium uppercase tracking-[0.22em] text-slate-600 shadow-sm">
-                    Full Stack Developer
+                    MERN Stack Developer
                   </span>
                 </div>
 
@@ -107,10 +108,10 @@ export default function HomePage() {
                     </h1>
 
                     <p className="max-w-2xl text-lg leading-9 text-slate-600 sm:text-xl">
-                      I’m Karthick Ravi, a Full Stack Developer focused on
-                      crafting scalable applications, polished user interfaces,
-                      and thoughtful digital experiences using modern web
-                      technologies.
+                      I&apos;m Karthick Ravi, a MERN Stack Developer with 3+
+                      years of experience building production-grade web
+                      applications with React, Next.js, TypeScript, Node.js,
+                      Express, and MongoDB.
                     </p>
                   </div>
                 </div>
@@ -150,7 +151,7 @@ export default function HomePage() {
                     </p>
 
                     <p className="mt-3 text-lg font-semibold text-slate-900">
-                      Python, FastAPIs
+                      Node.js, Express
                     </p>
                   </div>
 

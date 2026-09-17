@@ -63,7 +63,7 @@ export function WorkSection() {
           <SectionHeading
             command="WORK.EXE"
             title="Experience & Projects"
-            subtitle="Frontend developer building scalable products, modern interfaces, AI experiences, and business applications."
+            subtitle="MERN Stack Developer building scalable products, real-time systems, modern interfaces, and AI-powered applications."
           />{" "}
         </AnimateOnScroll>{" "}
         {/* Timeline */}{" "}

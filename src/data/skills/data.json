@@ -3,89 +3,56 @@
     {
       "id": 1,
       "img": [
-        {
-          "path": "/images/Logo/html.svg"
-        },
-        {
-          "path": "/images/Logo/css.svg"
-        },
-        {
-          "path": "/images/Logo/javascript.svg"
-        }
+        { "path": "/images/Logo/html.svg" },
+        { "path": "/images/Logo/css.svg" },
+        { "path": "/images/Logo/javascript.svg" }
       ],
-      "experience": "Skilled Frontend Developer with expertise in HTML, CSS, and JavaScript, building responsive, dynamic, and interactive web applications."
+      "experience": "Skilled Frontend Developer with expertise in HTML, CSS, and JavaScript (ES6+), building responsive, dynamic, and interactive web applications."
     },
     {
       "id": 2,
       "img": [
-        {
-          "path": "/images/Logo/react.svg"
-        },
-        {
-          "path": "/images/Logo/next-js.svg"
-        }
+        { "path": "/images/Logo/react.svg" },
+        { "path": "/images/Logo/next-js.svg" }
       ],
-      "experience": "Skilled in building interactive and scalable UI components with React, and developing fast, server-rendered, and SEO-optimized web applications with Next.js."
+      "experience": "Experienced in building scalable, production-grade UI components with React.js and developing fast, server-rendered, and SEO-optimized web applications with Next.js and TypeScript."
     },
     {
       "id": 3,
       "img": [
-        {
-          "path": "/images/Logo/redux.svg"
-        }
+        { "path": "/images/Logo/typescript.svg" }
       ],
-      "experience": "Proficient in managing global state with Redux, leveraging its power to build scalable, predictable, and debuggable applications, seamlessly integrating with React and Next.js."
+      "experience": "Proficient in TypeScript — leveraging static typing, interfaces, and generics to build maintainable, reliable full-stack applications across React, Next.js, and Node.js codebases."
     },
     {
       "id": 4,
       "img": [
-        {
-          "path": "/images/Logo/typescript.svg"
-        }
+        { "path": "/images/Logo/node.svg" },
+        { "path": "/images/Logo/Express.svg" }
       ],
-      "experience": "Experienced in building scalable and maintainable applications with TypeScript, leveraging its static typing and interfaces to ensure robust, reliable, and efficient code, seamlessly integrating with React, Next.js, and Redux."
+      "experience": "Experienced with Node.js and Express.js for building production REST APIs, authentication flows, and real-time backend systems integrated with MongoDB."
     },
     {
       "id": 5,
       "img": [
-        {
-          "path": "/images/Logo/git.svg"
-        }
+        { "path": "/images/Logo/mongo.svg" }
       ],
-      "experience": "I have expertise in Git version control, including branching strategies, merge conflicts."
+      "experience": "Proficient in MongoDB and Mongoose for schema design, CRUD operations, and data modeling in production-level MERN stack applications."
     },
     {
       "id": 6,
       "img": [
-        {
-          "path": "/images/Logo/tailwind.svg"
-        },
-        {
-          "path": "/images/Logo/antd.svg"
-        }
+        { "path": "/images/Logo/tailwind.svg" },
+        { "path": "/images/Logo/antd.svg" }
       ],
-      "experience": "Crafting responsive, customizable, and visually stunning UI components with Ant Design (antd) and Tailwind CSS, combining the strengths of both libraries to deliver efficient, scalable, and maintainable front-end solutions."
+      "experience": "Crafting responsive, customizable, and visually polished UI components with Ant Design (antd) and Tailwind CSS — delivering scalable and maintainable front-end solutions."
     },
     {
       "id": 7,
       "img": [
-        {
-          "path": "/images/Logo/node.svg"
-        },
-        {
-          "path": "/images/Logo/Express.svg"
-        }
+        { "path": "/images/Logo/git.svg" }
       ],
-      "experience": "Familiar with Node.js and Express.js from completing small tasks, such as setting up basic routes and handling requests. Eager to deepen knowledge by working on larger-scale backend projects.."
-    },
-    {
-      "id": 8,
-      "img": [
-        {
-          "path": "/images/Logo/mongo.svg"
-        }
-      ],
-      "experience": "Experience with MongoDB for handling data storage in small projects, including defining schemas, performing CRUD operations, and integrating with Node.js/Express.js applications. Open to growing skills with more complex database design and optimization."
+      "experience": "Proficient in Git version control — branching strategies, pull requests, code reviews, and team collaboration workflows on GitHub."
     }
   ]
 }

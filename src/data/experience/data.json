@@ -1,82 +1,42 @@
 [
   {
     "year": "Apr 2025 – Present",
-    "title": "Full Stack Developer | Freelancing",
+    "title": "Application Developer",
     "org": "Radiantze",
     "roles": [
       {
         "id": 1,
-        "resp": "Developed AssetSync, a jewelry management platform for handling jewels, loans, inventory tracking, and customer records with advanced filters and API integrations."
+        "resp": "Developed and maintained scalable frontend architecture for production-level applications using the MERN stack (MongoDB, Express.js, React.js, Node.js) with Next.js and TypeScript."
       },
       {
         "id": 2,
-        "resp": "Built and enhanced SeekersPlus & SeekersAI job platforms using Next.js, implementing Google Authentication, protected routes, reusable UI components, and scalable frontend architecture."
+        "resp": "Built real-time voice interview capabilities using WebRTC for live audio/video streaming, integrated with Deepgram for speech-to-text and Amazon Polly for text-to-speech."
       },
       {
         "id": 3,
-        "resp": "Worked on responsive dashboards, reusable component systems, performance optimization, and seamless backend integrations."
+        "resp": "Led and mentored a team of 4 developers, overseeing code quality, task delegation, and delivery timelines for key product features."
+      },
+      {
+        "id": 4,
+        "resp": "Redesigned admin dashboard interfaces with Ant Design and Tailwind CSS, and implemented role-based access control (RBAC) and permission-driven UI rendering across the platform."
       }
     ],
     "image": "/images/engineer.svg"
   },
   {
-    "year": "2023 – 2024",
-    "title": "Frontend Developer",
+    "year": "Mar 2023 – Feb 2025",
+    "title": "Application Developer",
     "org": "Quadkast Technologies",
     "roles": [
       {
         "id": 1,
-        "resp": "Contributed to DMAN, an online food delivery platform, by building responsive interfaces, route management, reusable components, and API integrations."
+        "resp": "Built reusable UI components with React.js and integrated Google Authentication (OAuth) and the Stripe payment gateway for secure user onboarding and subscription workflows."
       },
       {
         "id": 2,
-        "resp": "Worked on QK-Connect, an HRM platform, implementing employee management features, authentication flows, dashboard UI, and optimized frontend functionality."
-      },
-      {
-        "id": 3,
-        "resp": "Developed scalable frontend applications using React.js, Next.js, TypeScript, Tailwind CSS, and modern UI libraries."
-      },
-      {
-        "id": 4,
-        "resp": "Collaborated with designers and backend developers to deliver user-focused products with improved performance and accessibility."
+        "resp": "Collaborated with backend and product teams to deliver end-to-end, responsive features within agile development cycles, from requirements through deployment."
       }
     ],
     "image": "/images/quadkast.png"
-  },
-  {
-    "year": "2024 – Present",
-    "title": "Personal Projects",
-    "org": "Independent",
-    "roles": [
-      {
-        "id": 1,
-        "resp": "Built ChatBotAI, an AI-powered assistant platform with conversational UI, real-time interactions, and modern responsive design."
-      },
-      {
-        "id": 2,
-        "resp": "Created a professional portfolio application using Next.js, Tailwind CSS, animations, reusable components, and accessibility best practices."
-      },
-      {
-        "id": 3,
-        "resp": "Designed multiple modern UI dashboards and frontend systems focused on performance, scalability, and user experience."
-      }
-    ],
-    "image": "/images/project.svg"
-  },
-  {
-    "year": "Jul 2022 - Dec 2022",
-    "title": "Lead Generation Executive",
-    "org": "Eximio Pvt Ltd",
-    "roles": [
-      {
-        "id": 1,
-        "resp": "Utilized LinkedIn and ZoomInfo to research, track, and manage qualified business leads and follow-up workflows."
-      },
-      {
-        "id": 2,
-        "resp": "Analyzed market opportunities and maintained organized lead databases for business development initiatives."
-      }
-    ],
-    "image": "/images/eximio.svg"
   }
 ]
